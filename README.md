@@ -8,10 +8,10 @@ My project focuses on the Lotka-Volterra Model, a pair of first order nonlinear 
 
 ### Section 2 - lotka_volterra.cpp
 For the differential equation for prey, it comes in the form:
-dprey = (prey*alpha - prey*predator*beta),
+dprey = (prey x alpha - prey x predator x beta),
 where alpha describes the natural birth rate of prey in absence of any predation and beta describes the death rate of prey due to predation, a variable called hunting efficiency. This dprey value simply describes the rate of change in the prey population, acting as the stand in for the differential of prey population over time
 For the differential equation for predators, it is in the form:
-dpredators = (predator*delta*prey - eta*predator),
+dpredators = (predator x delta x prey - eta x predator),
 where delta describes the rate that predators increase due to consuming prey and eta describes the death rate of predators in the absence of prey.
 
 To tie the two equations together and integrate, we use the 4th order Runge-Kutta method, which allows us to discretize the approximate solutions for the nonlinear equations. Once set up, we can deal with our 'main' region of the code, setting our initial prey and predator population sizes as well as setting values for the 4 parameters described above. The parameters are set internally, not set once the .x file is run, to help me keep track of their changing values. Since much of this project is slighty changing these, its easier to remember where I'm at if I keep the values saved in the .cpp file. For the initial case, we will use parameters set for a well-known case, where alpha = 1.1, beta = 0.4, eta = 0.4, and delta = 0.1. This is out initial validation set, making sure that the lotka volterra model works generally. To save the output values for later, an ofstream output is written to the file "lotka_volterra.dat". This file saves the prey and predator populations at each iterative step to allow us to plot populations as time changes later on.
