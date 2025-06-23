@@ -1,5 +1,5 @@
 # Lotka-Volterra-Dynamics-and-Instabilities
-This document is simply an overview of this entire project. Since no other document is sumbitted with this project, it will serve as a tell all document for each section, describing code, data collection, and implementation. If anything is not included in the file itself or is discussed sparsely, it will be included here in much greater detail.
+This document is simply an overview of this entire project. It will serve as a tell all document for each section, describing code, data collection, and implementation. If anything is not included in the file itself or is discussed sparsely, it will be included here in much greater detail.
 
 
 ### Section 1 - The Lotka Volterra Model
